@@ -1,0 +1,99 @@
+@import '../../scss/vars';
+
+.user-card {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  overflow: hidden;
+  // margin: 0 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30%;
+    background-image: url('../../assets/images/bg-pattern-card.svg');
+    z-index: -1;
+  }
+  &__info {
+    margin-top: 7.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  &__img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-bottom: 2em;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__user {
+    display: flex;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__name {
+    margin: 0 15px 0 30px;
+    font-weight: 700;
+    color: $primary-accent;
+  }
+
+  &__age {
+    margin-bottom: 20px;
+  }
+
+  &__location {
+    margin-top: 0;
+  }
+
+  &__age,
+  &__location {
+    color: $primary;
+  }
+
+  &__stat {
+    width: 100%;
+    border-top: 1px solid $neutral;
+  }
+
+  &__stat-inner {
+    padding: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+  }
+
+  &__stat-item {
+    text-align: center;
+  }
+
+  &__stat-count {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $primary-accent;
+  }
+
+  &__stat-descr {
+    color: $neutral;
+  }
+}
